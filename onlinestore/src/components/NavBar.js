@@ -38,12 +38,12 @@ const NavBar = () => {
           className={
             !hamON
               ? "absolute flex flex-col right-0 -top-10 -z-10 p-4"
-              : "text-black absolute flex flex-col bg-slate-100 p-4 right-0 transform transition-top duration-500 ease-in-out top-[4rem] z-10"
+              : "text-black absolute flex flex-col font-semibold bg-slate-100 p-4 right-0 transform transition-top duration-500 ease-in-out top-[4rem] z-10"
           }
         >
-          <Link to="/">Home</Link>
-          <Link to="/products">Products</Link>
-          <Link to="/search">Search</Link>
+          <Link to="/" className="hover:border-b-4 border-black hover:pb-2 hover:scale-x-105 ">Home</Link>
+          <Link to="/products" className="hover:border-b-4 border-black hover:pb-2 hover:scale-x-105 ">Products</Link>
+          <Link to="/search" className="hover:border-b-4 border-black hover:pb-2 hover:scale-x-105 ">Search</Link>
         </div>
       </div>
     </div>

@@ -1,9 +1,9 @@
+import { FETCH_ALL} from '../constants/actionTypes'
 import * as api from '../api/index.js';
 
 export const getProducts = () => async (dispatch) => {
   try {
-    dispatch({ type: START_LOADING});
-    const { data } = await api.fetchPosts();
+    const { data } = await api.fetchProducts();
 
     console.log(data);
     dispatch({ type: FETCH_ALL, payload: data });
