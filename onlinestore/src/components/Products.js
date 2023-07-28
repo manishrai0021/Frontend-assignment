@@ -1,19 +1,34 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { fetchProducts } from '../api/index'
 
 const Products = () => {
-  //   const dispatch = useDispatch();
-//   const {product} = uses()
-    const {products} = useSelector((state) => state.products);
-  //   const error = useSelector((state) => state.products.error);
+//     const dispatch = useDispatch();
+// //   const {product} = uses()
+//     const {products} = useSelector((state) => state.products);
+//   //   const error = useSelector((state) => state.products.error);
 
-  //   useEffect(() => {
-  //     dispatch(fetchProducts());
-  //   }, [dispatch]);
+//     useEffect(() => {
+//       dispatch(fetchProducts());
+//     }, [dispatch]);
 
-  //   console.log(products)
-  
+//     console.log(products);
+  const products = [
+    {
+    "id": 1,
+    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    "price": 109.95,
+    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    "category": "men's clothing",
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    "rating": {
+      "rate": 3.9,
+      "count": 120
+    }
+  }
+]
+
   return (
     <div className="grid grid-flow-row grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 p-16 lg:px-44">
       {products.map((product) => {
